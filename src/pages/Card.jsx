@@ -13,7 +13,7 @@ export default function Card() {
 
   async function fetchWeatherData() {
     const res = await axios.get(
-      `http://api.weatherapi.com/v1/current.json?q=<${input}>&key=ddfe807022204694b3495913252709`
+      `https://api.weatherapi.com/v1/current.json?q=<${input}>&key=ddfe807022204694b3495913252709`
     );
     console.log(res.data);
     const data = res.data;
