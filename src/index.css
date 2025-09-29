@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
 body {
+  background-image: url("./images/bg1.jpeg");
   margin: 0;
   padding: 0;
   height: 100vh;
   box-sizing: border-box;
-  background: #d3d3d3;
+
   border: 20px solid;
   width: 100%;
   height: 100vh;
@@ -21,3 +22,7 @@ body {
   background-color: rgb(46, 47, 48);
   border-radius: 20px;
 } */
+
+.wrapper {
+  background-image: url("./images/bg2.jpeg");
+}

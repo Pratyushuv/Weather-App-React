@@ -87,7 +87,7 @@ export default function Card() {
   }
 
   return (
-    <div className="bg-[url('/images/bg.png)] h-full w-250 bg-zinc-100 mx-auto mt-13 border-8 rounded-4xl border-x-gray-700 ">
+    <div className="wrapper bg-[url('./images/bg2.jpeg)] h-full w-250  mx-auto mt-13 border-8 rounded-4xl border-x-gray-700 ">
       <Input
         input={input}
         handleInput={handleInput}
