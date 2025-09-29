@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Input from "./Input";
 import Weather from "./Weather";
 import axios from "axios";
+import Error from "./Error";
 
 const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
@@ -9,6 +10,7 @@ export default function Card() {
   const [input, setInput] = useState("");
   const [weather, setWeather] = useState({});
   const [coords, setCoords] = useState({});
+  const [hasError, setHasError] = useState(false);
 
   function handleInput(e) {
     setInput(e.target.value);
@@ -48,6 +50,7 @@ export default function Card() {
           };
 
           setWeather(weatherDetails);
+          setHasError(true);
         } catch (error) {
           console.error("Error fetching data:", error);
         }
@@ -80,9 +83,11 @@ export default function Card() {
       };
 
       setWeather(weatherDetails);
+      setHasError(true);
       console.log(weather);
     } catch (error) {
       console.error("Error fetching data:", error);
+      setHasError(false);
     }
   }
 
@@ -93,7 +98,7 @@ export default function Card() {
         handleInput={handleInput}
         fetchWeatherData={fetchWeatherData}
       />
-      <Weather weather={weather} />
+      {hasError ? <Weather weather={weather} /> : <Error />}
     </div>
   );
 }
