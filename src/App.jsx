@@ -7,7 +7,7 @@ function App() {
     <>
       <h1 className="text-zinc-900 text-6xl flex justify-center font-bold mt-6 font-mono border-b-4 pb-6">
         <svg
-          fill="#000000"
+          fill=""
           height="55px"
           width="105px"
           version="1.1"

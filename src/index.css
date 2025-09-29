@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  background-image: url("./images/bg1.jpeg");
+  background-image: url("./Weather-App-React/images/bg1.jpeg");
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -24,5 +24,5 @@ body {
 } */
 
 .wrapper {
-  background-image: url("./images/bg2.jpeg");
+  background-image: url("./Weather-App-React/images/bg2.jpeg");
 }
