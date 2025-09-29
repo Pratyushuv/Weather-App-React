@@ -28,7 +28,7 @@ export default function Card() {
       async function fetchInitialData() {
         try {
           const res = await axios.get(
-            `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q= ${coords.lat}, ${coords.lng}`
+            `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q= ${coords.lat}, ${coords.lng}`
           );
 
           console.log(res.data);
