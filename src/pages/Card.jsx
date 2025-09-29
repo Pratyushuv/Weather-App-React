@@ -3,6 +3,8 @@ import Input from "./Input";
 import Weather from "./Weather";
 import axios from "axios";
 
+const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+
 export default function Card() {
   const [input, setInput] = useState("");
   const [weather, setWeather] = useState({});
@@ -14,7 +16,7 @@ export default function Card() {
   async function fetchWeatherData() {
     try {
       const res = await axios.get(
-        `https://api.weatherapi.com/v1/current.json?q=<${input}>&key=ddfe807022204694b3495913252709`
+        `https://api.weatherapi.com/v1/current.json?q=<${input}>&key=${apiKey}`
       );
 
       console.log(res.data);
@@ -41,7 +43,7 @@ export default function Card() {
   }
 
   return (
-    <div className=" h-full w-180 bg-zinc-100 mx-auto mt-13 border-8 rounded-4xl border-x-gray-700 ">
+    <div className="bg-[url('/images/bg.png)] h-full w-250 bg-zinc-100 mx-auto mt-13 border-8 rounded-4xl border-x-gray-700 ">
       <Input
         input={input}
         handleInput={handleInput}
