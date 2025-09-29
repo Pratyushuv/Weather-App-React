@@ -12,26 +12,32 @@ export default function Card() {
   }
 
   async function fetchWeatherData() {
-    const res = await axios.get(
-      `https://api.weatherapi.com/v1/current.json?q=<${input}>&key=ddfe807022204694b3495913252709`
-    );
-    console.log(res.data);
-    const data = res.data;
-    const weatherDetails = {
-      city: data.location.name,
-      time: data.current.last_updated,
-      image: data.current.condition.icon,
-      condition: data.current.condition.text,
-      temperature: data.current.temp_c,
-      wind: data.current.wind_kph,
-      pressure: data.current.pressure_mb,
-      precipitation: data.current.precip_mm,
-      humidity: data.current.humidity,
-      feelike: data.current.feelslike_c,
-    };
+    try {
+      const res = await axios.get(
+        `https://api.weatherapi.com/v1/current.json?q=<${input}>&key=ddfe807022204694b3495913252709`
+      );
 
-    setWeather(weatherDetails);
-    console.log(weather);
+      console.log(res.data);
+      const data = res.data;
+
+      const weatherDetails = {
+        city: data.location.name,
+        time: data.current.last_updated,
+        image: data.current.condition.icon,
+        condition: data.current.condition.text,
+        temperature: data.current.temp_c,
+        wind: data.current.wind_kph,
+        pressure: data.current.pressure_mb,
+        precipitation: data.current.precip_mm,
+        humidity: data.current.humidity,
+        feelike: data.current.feelslike_c,
+      };
+
+      setWeather(weatherDetails);
+      console.log(weather);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   }
 
   return (
