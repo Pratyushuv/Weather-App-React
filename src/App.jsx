@@ -167,7 +167,7 @@ function App() {
             </g>{" "}
           </g>
         </svg>
-        Aura
+        AURA
       </h1>
       <Card />
     </>

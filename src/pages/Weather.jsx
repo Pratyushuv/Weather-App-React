@@ -14,7 +14,7 @@ export default function Weather({ weather }) {
             <h5 className="text-white text-4xl font-bold mt-7">
               {weather.condition}
             </h5>
-            <div className="text-white flex gap-1 text-5xl font-bold ">
+            <div className="text-white flex gap-3 text-5xl font-bold ">
               <span className="self-center">
                 <svg
                   fill="#ffffff"
