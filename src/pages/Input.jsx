@@ -1,6 +1,6 @@
 export default function Input({ input, handleInput, fetchWeatherData }) {
   return (
-    <div className="flex gap-5 justify-center p-5">
+    <div className="input-container lg:flex gap-5 justify-center p-5">
       <input
         className="flex-2 border-4 w-full px-4 py-2 border-black-300 rounded-3xl bg-sky-200 text-black font-bold"
         type="text"

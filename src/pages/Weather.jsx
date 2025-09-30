@@ -1,20 +1,24 @@
 export default function Weather({ weather }) {
   return (
-    <div className=" h-90 w-170 m-auto rounded-3xl">
-      <div className="main flex justify-start">
-        <div className="sec1 flex-col mt-5 ">
-          <h5 className="text-white text-5xl  font-bold ">{weather.city}</h5>
-          <p className="text-white text-sm font-bold mt-2">{weather.time}</p>
+    <div className=" lg:h-90 w-170 m-auto rounded-3xl">
+      <div className="lg:main flex justify-start">
+        <div className="lg:sec1 flex-col mt-5 ">
+          <h5 className="city lg: text-white text-5xl  font-bold ">
+            {weather.city}
+          </h5>
+          <p className="time lg: text-white text-sm font-bold mt-2">
+            {weather.time}
+          </p>
         </div>
       </div>
-      <div className="wrap flex justify-between">
+      <div className="wrap lg: flex justify-between">
         <div className="sec2 flex mt-5">
-          <img src={weather.image} className="w-50 h-50" />
+          <img src={weather.image} className="lg:w-50 h-50" />
           <div className="con flex flex-col gap-5">
-            <h5 className="text-white text-4xl font-bold mt-7">
+            <h5 className="condition lg: text-white text-4xl font-bold mt-7">
               {weather.condition}
             </h5>
-            <div className="text-white flex gap-3 text-5xl font-bold ">
+            <div className="info lg: text-white flex gap-3 text-5xl font-bold ">
               <span className="self-center">
                 <svg
                   fill="#ffffff"
@@ -39,8 +43,8 @@ export default function Weather({ weather }) {
             </div>
           </div>
         </div>
-        <ul className="relative left-27 Current flex flex-col items-center justify-center h-64 gap-5">
-          <li className="text-white self-baseline flex gap-1 text-1xl font-bold ">
+        <ul className="list lg: relative left-27 Current flex flex-col items-center justify-center h-64 gap-5">
+          <li className="info lg: text-white self-baseline flex gap-1 text-1xl font-bold ">
             <span className="self-center">
               <svg
                 width="25px"
@@ -69,7 +73,7 @@ export default function Weather({ weather }) {
             </span>
             Wind : {weather.wind} km/h
           </li>
-          <li className="text-white flex gap-1 text-1xl font-bold self-baseline">
+          <li className="info lg: text-white flex gap-1 text-1xl font-bold self-baseline">
             <span className="self-center">
               <svg
                 width="25px"
@@ -121,7 +125,7 @@ export default function Weather({ weather }) {
             </span>
             Pressure : {weather.pressure} hPa
           </li>
-          <li className="text-white flex gap-1 text-1xl font-bold self-baseline">
+          <li className="info lg:  text-white flex gap-1 text-1xl font-bold self-baseline">
             <span className="self-center">
               <svg
                 width="25px"
@@ -150,7 +154,7 @@ export default function Weather({ weather }) {
             </span>
             Precipitation: {weather.precipitation} mm
           </li>
-          <li className="text-white flex gap-1 text-1xl font-bold self-baseline">
+          <li className="info lg: text-white flex gap-1 text-1xl font-bold self-baseline">
             <span className="self-center">
               <svg
                 width="25px"

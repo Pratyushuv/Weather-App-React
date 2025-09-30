@@ -4,12 +4,11 @@ body {
   background-image: url("/Weather-App-React/images/bg1.jpeg");
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
   box-sizing: border-box;
 
-  border: 20px solid;
   width: 100%;
-  height: 100vh;
+
   min-width: fit-content;
 }
 
@@ -25,4 +24,124 @@ body {
 
 .wrapper {
   background-image: url("/Weather-App-React/images/bg2.jpeg");
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    height: 100%;
+    min-height: 80rem;
+  }
+
+  .input-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  input {
+    height: 100px;
+    font-size: 3rem;
+  }
+  button {
+    height: 100px;
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+
+  .city {
+    font-size: 7rem;
+  }
+  .time {
+    font-size: 3rem;
+  }
+
+  .wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    width: 20rem;
+    height: 20rem;
+  }
+  .condition {
+    font-size: 4rem;
+  }
+
+  .info {
+    font-size: 3rem;
+  }
+
+  .list {
+    width: 100%;
+    margin-top: 80px;
+  }
+
+  .heading {
+    font-size: 10rem;
+  }
+  .sec2 {
+    margin-top: 50px;
+  }
+  .logo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 1024px) {
+  input {
+    height: 80px;
+    font-size: 3rem;
+  }
+  button {
+    height: 80px;
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+
+  .info {
+    font-size: 20px;
+  }
+
+  .list {
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .wrap {
+    display: flex;
+    gap: 100px;
+  }
+
+  /* .city {
+    font-size: 4rem;
+  }
+  .time {
+    font-size: 2rem;
+  }
+
+  .wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    width: 15rem;
+    height: 15rem;
+  }
+  .condition {
+    font-size: 3rem;
+  }
+
+  .info {
+    font-size: 2rem;
+  } */
+
+  /* .list {
+    width: 100%;
+    margin-top: 10px;
+  } */
+
+  /* .heading {
+    font-size: 10rem;
+  } */
 }
