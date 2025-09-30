@@ -5,7 +5,7 @@ import Card from "./pages/Card";
 function App() {
   return (
     <>
-      <h1 className="heading text-zinc-900 text-6xl flex justify-center font-bold mt-6 font-mono border-b-4 pb-6">
+      <h1 className="heading text-zinc-900 w-full text-6xl flex justify-center font-bold mt-6 font-mono  pb-6">
         <svg
           className="logo"
           fill=""
