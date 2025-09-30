@@ -46,6 +46,7 @@ body {
     height: 100px;
     font-size: 3rem;
     margin-top: 1rem;
+    cursor: pointer;
   }
 
   .city {
@@ -92,11 +93,13 @@ body {
   input {
     height: 80px;
     font-size: 3rem;
+    align-self: self-end;
   }
   button {
     height: 80px;
     font-size: 3rem;
     margin-top: 1rem;
+    cursor: pointer;
   }
 
   .info {

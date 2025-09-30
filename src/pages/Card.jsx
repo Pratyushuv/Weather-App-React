@@ -84,6 +84,7 @@ export default function Card() {
 
       setWeather(weatherDetails);
       setHasError(true);
+      setInput("");
       console.log(weather);
     } catch (error) {
       console.error("Error fetching data:", error);

@@ -9,7 +9,7 @@ export default function Input({ input, handleInput, fetchWeatherData }) {
         onChange={handleInput}
       />
       <button
-        className="flex-1 w-full border-4 rounded-3xl bg-sky-200 font-bold"
+        className="flex-1 w-full border-4 rounded-3xl bg-sky-200 font-bold cursor-pointer"
         onClick={fetchWeatherData}
       >
         Search
